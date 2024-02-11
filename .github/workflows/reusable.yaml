@@ -5,7 +5,7 @@ on:
       who-call:
         description: 'Who call this workflow'
         required: true
-
+        type: string
 jobs:
   show-caller:
     name: Show caller
