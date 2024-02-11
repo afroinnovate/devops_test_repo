@@ -12,4 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show caller
-        run: echo "The caller is ${{ github.event.inputs.who-call }}"
+        run: |
+          echo "The caller is ${{ inputs.who-call }}"
+          echo "The caller is ${{ github.event.inputs.who-call }}"
