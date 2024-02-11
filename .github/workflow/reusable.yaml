@@ -1,0 +1,15 @@
+name: Reusable
+on:
+  workflow_call:
+    inputs:
+      who-call:
+        description: 'Who call this workflow'
+        required: true
+
+jobs:
+  show-caller:
+    name: Show caller
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show caller
+        run: echo "The caller is ${{ github.event.inputs.who-call }}"

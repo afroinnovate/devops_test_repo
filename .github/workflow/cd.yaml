@@ -1,0 +1,19 @@
+name: CD
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository 
+        uses: action/checkout@v4
+      - name: deploy
+        run: |
+          echo "Deploying the application..."
+          echo "Deployed the application. by ${{ github.actor }}"
+
