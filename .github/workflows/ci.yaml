@@ -10,7 +10,7 @@ on:
 
 jobs:
   show-caller:
-    if: startWith(github.ref, 'refs/heads/feature/')
+    if: ${{ startsWith(github.ref, 'refs/heads/feature/') }}
     uses: './.github/workflows/reusable.yaml'
     with:
       who-call: 'CI'
