@@ -6,6 +6,12 @@ on:
   workflow_dispatch:
 
 jobs:
+  reusable:
+    uses: './.github/workflows/reusable.yaml'
+    with:
+      who-call: 'CD'
+
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
